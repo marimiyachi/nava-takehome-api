@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180109145755) do
+ActiveRecord::Schema.define(version: 20180109162805) do
 
   create_table "measures", force: :cascade do |t|
     t.string "measure_id"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["measure_id"], name: "index_measures_on_measure_id", unique: true
   end
 
 end

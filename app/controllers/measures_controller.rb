@@ -1,12 +1,6 @@
 class MeasuresController < ApplicationController
   before_action :set_measure, only: [:show, :update, :destroy]
 
-  # GET /measures
-  def index
-    @measures = Measure.all
-    json_response(@measures)
-  end
-
   # POST /measures
   def create
     @measure = Measure.create!(measure_params)
